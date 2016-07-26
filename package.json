@@ -1,0 +1,49 @@
+{
+  "name": "ioreg",
+  "version": "0.0.1",
+  "description": "Query I/O Kit registry",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo 'tests not available'",
+    "prebuild": "npm test && rimraf dist",
+    "build": "babel --ignore *.test.js --out-dir dist src",
+    "prepublish": "npm run build"
+  },
+  "keywords": [],
+  "author": "rogerbf <roger@bergfalk.nu> (http://bergfalk.nu/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.11.4",
+    "babel-preset-es2015": "6.9.0",
+    "rimraf": "2.5.4"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "execa": "0.4.0",
+    "plist": "1.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerbf/ioreg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerbf/ioreg/issues"
+  },
+  "homepage": "https://github.com/rogerbf/ioreg#readme"
+}
